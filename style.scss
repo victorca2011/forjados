@@ -14,14 +14,21 @@ body {
 	align-items: center;
 	text-align: center;
 	height: 100vh;
+	.color-background {
+		background: linear-gradient(90deg, rgba(253, 29, 29, 0.75), rgba(29, 253, 128, 0.75));
+		border-radius: 50px;
+		padding: 50px 0px;
+	}
 	.body-container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background: linear-gradient(90deg, rgba(253, 29, 29, 0.75), rgba(29, 253, 128, 0.75));
-		border-radius: 50px;
 		padding: 50px;
+		background-image: url('img/picmix.com_1037954.png');
+		background-size: contain;
+		background-position: center; 
+		background-repeat: no-repeat;
 	}
 	#title-top {
 		display: flex;
@@ -65,8 +72,9 @@ body::before {
 .container {
 	user-select: none;
 	display: flex;
-	justify-content: center;
-	align-items: center; 
+	align-items: center;
+	width: 60%;
+	margin-bottom: 50px;
 }
 
 .random-div {
@@ -91,7 +99,7 @@ body::before {
 	color: wheat;
 	text-align: center;
 	border-radius: 100%;
-	margin-left: 20px;
+	margin-left: 40%;
 	user-select: none;
 	a {
 		text-decoration: none;
@@ -121,9 +129,16 @@ body::before {
 	body {
 		margin: 0;
 		display: flex;
+		.color-background {
+			padding: 20px 0px;
+		}
 		.body-container {
 			background: linear-gradient(90deg, rgba(253, 29, 29, 0.75), rgba(29, 253, 128, 0.75));
 			border-radius: 50px;
+			background-image: url('img/picmix.com_1037954.png');
+			background-size: contain;
+			background-position: center; 
+			background-repeat: no-repeat;
 		}
 		#title-top {
 			width: auto;
@@ -140,5 +155,13 @@ body::before {
 	body::before {
 		background-image: url('img/Imagem\ do\ WhatsApp\ de\ 2024-07-15\ à\(s\)\ 11.26.15_263fb97b.jpg');
 
+		
+	}
+	.container {
+		user-select: none;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 50px;
 	}
 }

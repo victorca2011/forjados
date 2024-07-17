@@ -15,14 +15,21 @@ body {
   text-align: center;
   height: 100vh;
 }
+body .color-background {
+  background: linear-gradient(90deg, rgba(253, 29, 29, 0.75), rgba(29, 253, 128, 0.75));
+  border-radius: 50px;
+  padding: 50px 0px;
+}
 body .body-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, rgba(253, 29, 29, 0.75), rgba(29, 253, 128, 0.75));
-  border-radius: 50px;
   padding: 50px;
+  background-image: url("img/picmix.com_1037954.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 body #title-top {
   display: flex;
@@ -69,8 +76,9 @@ body::before {
      -moz-user-select: none;
           user-select: none;
   display: flex;
-  justify-content: center;
   align-items: center;
+  width: 60%;
+  margin-bottom: 50px;
 }
 
 .random-div {
@@ -95,7 +103,7 @@ body::before {
   color: wheat;
   text-align: center;
   border-radius: 100%;
-  margin-left: 20px;
+  margin-left: 40%;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -131,9 +139,16 @@ body::before {
     margin: 0;
     display: flex;
   }
+  body .color-background {
+    padding: 20px 0px;
+  }
   body .body-container {
     background: linear-gradient(90deg, rgba(253, 29, 29, 0.75), rgba(29, 253, 128, 0.75));
     border-radius: 50px;
+    background-image: url("img/picmix.com_1037954.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   body #title-top {
     width: auto;
@@ -147,5 +162,14 @@ body::before {
   }
   body::before {
     background-image: url("img/Imagem do WhatsApp de 2024-07-15 à(s) 11.26.15_263fb97b.jpg");
+  }
+  .container {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
