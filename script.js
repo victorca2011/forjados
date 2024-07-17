@@ -13,17 +13,9 @@ const audios = [
     document.getElementById('audio6'),
     document.getElementById('audio7')
 ];
-document.addEventListener('DOMContentLoaded', (event) => {
 const backgroundMusic = document.querySelector('.background-music#audio');
-if (backgroundMusic) {
   backgroundMusic.volume = 0.03;
-  document.body.addEventListener('click', () => {
-    if (backgroundMusic.paused) {
-      backgroundMusic.play();
-    }
-  });
-}
-});
+
 audios.volume = 1.0;
 
     // Função para tocar o áudio e redirecionar após a reprodução

@@ -6,7 +6,9 @@ let ui = {
   audio: 'audio',
   percentage: 'percentage',
   seekObj: 'seekObj',
-  currentTime: 'currentTime'
+  currentTime: 'currentTime',
+  volumeControl: 'volumeControl', // Controle de volume
+  volumeIcon: 'volumeIcon' // Ícone de volume
 };
 
 function togglePlay() {
@@ -19,8 +21,6 @@ function togglePlay() {
   }
 }
 
-
-
 function calculatePercentPlayed() {
   let percentage = (media.currentTime / media.duration).toFixed(2) * 100;
   $(ui.percentage).style.width = `${percentage}%`;
@@ -31,7 +31,7 @@ function calculateCurrentValue(currentTime) {
   const currentSecondsLong = currentTime % 60;
   const currentSeconds = currentSecondsLong.toFixed();
   const currentTimeFormatted = `${currentMinute < 10 ? `0${currentMinute}` : currentMinute}:${
-  currentSeconds < 10 ? `0${currentSeconds}` : currentSeconds
+    currentSeconds < 10 ? `0${currentSeconds}` : currentSeconds
   }`;
   
   return currentTimeFormatted;
@@ -56,5 +56,26 @@ function initProgressBar() {
   calculatePercentPlayed();
 }
 
-$(ui.play).addEventListener('click', togglePlay)
+// Função para definir o volume
+function setVolume() {
+  media.volume = $(ui.volumeControl).value;
+}
+
+// Função para mostrar/ocultar o controle de volume
+function toggleVolumeControl() {
+  const volumeControl = $(ui.volumeControl);
+  if (volumeControl.style.display === 'none' || volumeControl.style.display === '') {
+    volumeControl.style.display = 'block';
+  } else {
+    volumeControl.style.display = 'none';
+  }
+}
+
+// Eventos
+$(ui.play).addEventListener('click', togglePlay);
 $(ui.audio).addEventListener('timeupdate', initProgressBar);
+$(ui.volumeControl).addEventListener('input', setVolume);
+$(ui.volumeIcon).addEventListener('click', toggleVolumeControl);
+
+// Definindo volume inicial
+media.volume = 0.03;
