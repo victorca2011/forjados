@@ -34,11 +34,11 @@ body {
   border: none;
   width: 30px;
   height: 30px;
-  background: url("https://img.icons8.com/pause") no-repeat center;
+  background: url("https://img.icons8.com/play") no-repeat center;
   background-size: contain;
 }
 .audio-player #playAudio.pause {
-  background: url("https://img.icons8.com/play") no-repeat center;
+  background: url("https://img.icons8.com/pause") no-repeat center;
   background-size: contain;
 }
 .audio-player p {

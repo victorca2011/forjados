@@ -14,10 +14,10 @@ media.volume = 0.03;
 function togglePlay() {
   if (media.paused === false) {
     media.pause();
-    $(ui.play).classList.add('pause');
+    $(ui.play).classList.remove('pause');
   } else {
     media.play();
-    $(ui.play).classList.remove('pause');
+    $(ui.play).classList.add('pause');
   }
 }
 
