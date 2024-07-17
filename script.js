@@ -66,3 +66,4 @@ function tocarAudioAleatorio() {
 
 // Adiciona eventos de toque para mudar a posição da div e tocar áudio
 minhaDiv.addEventListener('touchstart', mudarPosicao);
+minhaDiv.addEventListener('click', mudarPosicao);
