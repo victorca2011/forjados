@@ -9,10 +9,8 @@ let ui = {
   currentTime: 'currentTime'
 };
 
-media.volume = 0.03;
-
 function togglePlay() {
-  if (media.paused === false) {
+  if (!media.paused) {
     media.pause();
     $(ui.play).classList.remove('pause');
   } else {

@@ -1,7 +1,7 @@
 // Seleciona a div e atribui a uma variável
 const minhaDiv = document.getElementById('minhaDiv');
 const randomContainer = document.getElementById('randomContainer');
-const meuAudio = document.getElementsByClassName('background-music');
+
 
 // Seleciona os áudios e armazena em um array
 const audios = [
@@ -13,7 +13,10 @@ const audios = [
     document.getElementById('audio6'),
     document.getElementById('audio7')
 ];
-meuAudio.volume = 0.02;
+const backgroundMusic = document.querySelector('.background-music#audio');
+if (backgroundMusic) {
+  backgroundMusic.volume = 0.03;
+}
 audios.volume = 1.0;
 
     // Função para tocar o áudio e redirecionar após a reprodução
