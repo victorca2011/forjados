@@ -6,9 +6,7 @@ let ui = {
   audio: 'audio',
   percentage: 'percentage',
   seekObj: 'seekObj',
-  currentTime: 'currentTime',
-  volumeControl: 'volumeControl', // Controle de volume
-  volumeIcon: 'volumeIcon' // Ícone de volume
+  currentTime: 'currentTime'
 };
 
 function togglePlay() {
@@ -56,26 +54,8 @@ function initProgressBar() {
   calculatePercentPlayed();
 }
 
-// Função para definir o volume
-function setVolume() {
-  media.volume = $(ui.volumeControl).value;
-}
-
-// Função para mostrar/ocultar o controle de volume
-function toggleVolumeControl() {
-  const volumeControl = $(ui.volumeControl);
-  if (volumeControl.style.display === 'none' || volumeControl.style.display === '') {
-    volumeControl.style.display = 'block';
-  } else {
-    volumeControl.style.display = 'none';
-  }
-}
-
-// Eventos
 $(ui.play).addEventListener('click', togglePlay);
 $(ui.audio).addEventListener('timeupdate', initProgressBar);
-$(ui.volumeControl).addEventListener('input', setVolume);
-$(ui.volumeIcon).addEventListener('click', toggleVolumeControl);
 
 // Definindo volume inicial
 media.volume = 0.03;
