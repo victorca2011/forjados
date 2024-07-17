@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/musics.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Acamp Forjados</title>
+</head>
+<body>
+    <div class="audio-player">
+
+        <audio id="audio" class="background-music" autoplay>
+          <source src="assets/background-music.mp3" type="audio/mp3">
+        </audio>
+      
+        <div class="player-controls">
+      
+          <div id="radioIcon"></div>
+      
+          <button id="playAudio"></button>
+      
+          <div id="seekObjContainer">
+            <div id="seekObj">
+              <div id="percentage"></div>
+            </div>
+          </div>
+      
+          <p><small id="currentTime">00:00</small></p>
+      
+        </div>
+      </div>
+
+    <div class="body-container">
+    <h1 id="title-top">Você vai para o nosso Acamp Jota <span>FORJADOS?</span></h1>
+    <div class="container">
+
+    <div class="random-container" id="randomContainer"></div>
+    <div class="random-div" id="minhaDiv"><h1>NÃO</h1>
+        <audio id="audio1" src="assets/erroooou.mp3"></audio>
+        <audio id="audio2" src="assets/peeer.mp3"></audio>
+        <audio id="audio3" src="assets/saai.mp3"></audio>
+        <audio id="audio4" src="assets/teimoso.mp3"></audio>
+        <audio id="audio5" src="assets/vaisim.mp3"></audio>
+        <audio id="audio6" src="assets/botaerrado.mp3"></audio>
+        <audio id="audio7" src="assets/vaisim.mp3"></audio>
+    </div>
+        
+    <div class="yes-content" onclick="tocarAudio()"><h1>
+
+        <a href="https://www.instagram.com/p/C9cpVXYR4C3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D" id="meuLink">SIM</a></h1> </div>
+        <audio src="assets/jesse.mp3" id="jesse"></audio>
+</div>
+</div>
+<div class="footers"></div>
+      <script src="script.js"></script>
+      <script src="scripts/musics.js"></script>
+</body>
+</html>

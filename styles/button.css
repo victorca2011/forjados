@@ -1,0 +1,14 @@
+.yes-content {
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    border-radius: 50px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    box-shadow: 4px 4px 5px #fff, -4px -4px 5px #fff, inset 4px 4px 5px #ababab;
+  }
+  
+  .yes-content:active {
+    box-shadow: 4px 4px 5px #fff, -4px -4px 5px #fff, inset 4px 4px 5px #000;
+  }
